@@ -144,8 +144,6 @@ form input, textarea {
   margin-top: 15px;
 }
 .boton:hover {
-  font-size: 1.25rem;
-  color: #fff;
   background-color: #55748d;
   box-shadow: 0 0 1.25rem #fff;
 }
