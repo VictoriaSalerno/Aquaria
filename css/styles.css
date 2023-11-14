@@ -176,3 +176,26 @@ form input, textarea {
   transition: .3s;
   color: #000000;
 }
+
+
+
+
+.container {
+  display: flex; /* Utilizamos flexbox para la estructura de dos columnas */
+}
+
+.imagen {
+  flex: 1; /* La imagen ocupa la mitad del contenedor */
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #239EB9;
+}
+
+.contenido {
+  flex: 1; /* El contenido ocupa la otra mitad del contenedor */
+  padding: 20px; /* Añadimos un poco de espacio alrededor del contenido */
+  text-align: center;
+}
