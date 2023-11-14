@@ -141,6 +141,7 @@ form input, textarea {
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: 0.063rem;
+  margin-top: 15px;
 }
 .boton:hover {
   font-size: 1.25rem;
