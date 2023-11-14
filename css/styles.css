@@ -176,10 +176,6 @@ form input, textarea {
   transition: .3s;
   color: #000000;
 }
-
-
-
-
 .container {
   display: flex; /* Utilizamos flexbox para la estructura de dos columnas */
 }
@@ -198,4 +194,12 @@ form input, textarea {
   flex: 1; /* El contenido ocupa la otra mitad del contenedor */
   padding: 20px; /* Añadimos un poco de espacio alrededor del contenido */
   text-align: center;
+}
+
+#carouselExampleIndicators{
+  margin: 3rem 16rem;
+}
+.carousel-inner{
+  border-radius: 4rem;
+  height: 38rem;
 }
