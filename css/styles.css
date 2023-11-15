@@ -298,3 +298,17 @@ form input, textarea {
 .portada-h1{
   padding-top: 5rem;
 }
+
+/* MAPA */
+
+.mapa{
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  margin-bottom: 5rem;
+}
+
+.map-titulo{
+  text-align: center;
+  margin-top: 5rem;
+}
