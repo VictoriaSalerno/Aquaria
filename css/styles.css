@@ -36,7 +36,7 @@ nav ul li {
 }
 
 nav ul li a {
-  text-decoration: none!important;
+  text-decoration: none;
   color: black;
   font-size: 1.2rem;
 }
@@ -164,26 +164,6 @@ form input, textarea {
   color: #fff;
   resize: none;
  }
-
- @media (max-width: 768px) {
-  #contacto form {
-    width: 90%; 
-  }
-
-  .boton {
-    width: 100%; 
-  }
-  
-  .nombre,
-  .email,
-  .mensaje,
-  .boton,
-  .contacto h3 {
-    font-size: 1.2rem;
-  }
-}
-
-
  /*FOOTER*/
  footer{
   text-align: center;
@@ -196,14 +176,12 @@ form input, textarea {
   transition: .3s;
   color: #000000;
 }
-
-/* Sobre Nosotros */
 .container {
-  display: flex; 
+  display: flex; /* Utilizamos flexbox para la estructura de dos columnas */
 }
 
 .imagen {
-  flex: 1;
+  flex: 1; /* La imagen ocupa la mitad del contenedor */
 }
 
 .imagen img {
@@ -213,47 +191,10 @@ form input, textarea {
 }
 
 .contenido {
-  flex: 1; 
-  padding: 20px;
+  flex: 1; /* El contenido ocupa la otra mitad del contenedor */
+  padding: 20px; /* Añadimos un poco de espacio alrededor del contenido */
   text-align: center;
 }
-
-
-/* Estilos para pantallas más grandes */
-.container {
-  display: flex; 
-}
-
-.imagen {
-  flex: 1;
-}
-
-.imagen img {
-  max-width: 100%;
-  height: auto;
-  border: 2px solid #239EB9;
-}
-
-.contenido {
-  flex: 1; 
-  padding: 40px;
-  text-align: center;
-}
-
-/* Estilos para pantallas más pequeñas */
-@media (max-width: 1200px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .contenido {
-    padding: 10px; /* Modifica el espaciado para pantallas más pequeñas */
-  }
-  
-}
-
-
-
 
 #carouselExampleIndicators{
   margin: 3rem 12rem;
@@ -370,4 +311,16 @@ form input, textarea {
 .map-titulo{
   text-align: center;
   margin-top: 5rem;
+}
+
+
+/* TICKETS */
+
+.tickets-container{
+  display: flex;
+  justify-content: center;
+}
+.card{
+  margin: 5rem;
+  border-radius: 2.125rem;
 }
