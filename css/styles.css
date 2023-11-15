@@ -176,12 +176,14 @@ form input, textarea {
   transition: .3s;
   color: #000000;
 }
+
+/* Utilizamos flexbox para la estructura de dos columnas */
 .container {
-  display: flex; /* Utilizamos flexbox para la estructura de dos columnas */
+  display: flex; 
 }
 
 .imagen {
-  flex: 1; /* La imagen ocupa la mitad del contenedor */
+  flex: 1;
 }
 
 .imagen img {
@@ -191,10 +193,46 @@ form input, textarea {
 }
 
 .contenido {
-  flex: 1; /* El contenido ocupa la otra mitad del contenedor */
-  padding: 20px; /* Añadimos un poco de espacio alrededor del contenido */
+  flex: 1; 
+  padding: 20px;
   text-align: center;
 }
+
+
+/* Estilos para pantallas más grandes */
+.container {
+  display: flex; 
+}
+
+.imagen {
+  flex: 1;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #239EB9;
+}
+
+.contenido {
+  flex: 1; 
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .contenido {
+    padding: 10px; /* Modifica el espaciado para pantallas más pequeñas */
+  }
+}
+
+
+
 
 #carouselExampleIndicators{
   margin: 3rem 12rem;
