@@ -252,7 +252,6 @@ form input, textarea {
   font-size: 3rem;
   color: var(--white);
 }
-
 .animal .box-container .box:is(:hover, :focus-within) .content{
   transform: translateY(-20px);
 }
@@ -262,3 +261,20 @@ form input, textarea {
   margin: 3rem;
 }
 
+/*TICKETS*/
+.box-t {
+  width: 310px;
+  height: 425px;
+  background-color: #6d8eaa;
+  border-radius: 34px;
+  }
+
+.tickets-titulo{
+  text-align: center;
+  padding: 3rem;
+}
+.tickets{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
