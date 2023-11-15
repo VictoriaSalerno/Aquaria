@@ -216,7 +216,7 @@ form input, textarea {
 
 .contenido {
   flex: 1; 
-  padding: 20px;
+  padding: 40px;
   text-align: center;
 }
 
@@ -229,6 +229,7 @@ form input, textarea {
   .contenido {
     padding: 10px; /* Modifica el espaciado para pantallas más pequeñas */
   }
+  
 }
 
 
