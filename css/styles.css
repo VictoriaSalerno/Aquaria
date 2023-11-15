@@ -176,24 +176,77 @@ form input, textarea {
   transition: .3s;
   color: #000000;
 }
-.container {
-  display: flex; /* Utilizamos flexbox para la estructura de dos columnas */
-}
-
-.imagen {
-  flex: 1; /* La imagen ocupa la mitad del contenedor */
-}
-
-.imagen img {
-  max-width: 100%;
-  height: auto;
-  border: 2px solid #239EB9;
-}
-
-.contenido {
-  flex: 1; /* El contenido ocupa la otra mitad del contenedor */
-  padding: 20px; /* Añadimos un poco de espacio alrededor del contenido */
+.contacto{
+  color: black;
   text-align: center;
+}
+#contacto{
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+}
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+}
+form input, textarea {
+padding: 0.93rem;
+border-radius: 0.5rem;
+width: 100%;
+border: none;
+outline: none;
+background: #6D8FAA;
+margin-bottom: 0.93rem;
+}
+.boton {
+width: 6rem;
+cursor: pointer;
+background: #6D8FAA;
+color: #fff;
+justify-content: center;
+text-transform: uppercase;
+letter-spacing: 0.063rem;
+margin-top: 15px;
+}
+.boton:hover {
+background-color: #55748d;
+box-shadow: 0 0 1.25rem #fff;
+}
+.contacto h3{
+padding: 1.5rem;
+}
+h3 .first-c{
+font-size: 2.5rem;
+font-weight: bolder;
+}
+h3 .second-c{
+font-size: 2.5rem;
+font-weight: bolder;
+color: #239EB9;
+}
+.nombre, .email, .mensaje, .boton{
+font-size: 1rem;
+color: #fff;
+resize: none;
+}
+
+@media (max-width: 768px) {
+#contacto form {
+  width: 90%; 
+}
+
+.boton {
+  width: 100%; 
+}
+
+.nombre,
+.email,
+.mensaje,
+.boton,
+.contacto h3 {
+  font-size: 1.2rem;
+}
 }
 
 #carouselExampleIndicators{
@@ -323,4 +376,64 @@ form input, textarea {
 .card{
   margin: 5rem;
   border-radius: 2.125rem;
+}
+
+
+
+
+
+
+/* Sobre Nosotros */
+.container {
+  display: flex; 
+}
+
+.imagen {
+  flex: 1;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #239EB9;
+}
+
+.contenido {
+  flex: 1; 
+  padding: 20px;
+  text-align: center;
+}
+
+
+/* Estilos para pantallas mÃ¡s grandes */
+.container {
+  display: flex; 
+}
+
+.imagen {
+  flex: 1;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #239EB9;
+}
+
+.contenido {
+  flex: 1; 
+  padding: 40px;
+  text-align: center;
+}
+
+/* Estilos para pantallas mÃ¡s pequeÃ±as */
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .contenido {
+    padding: 10px; /* Modifica el espaciado para pantallas mÃ¡s pequeÃ±as */
+  }
+  
 }
