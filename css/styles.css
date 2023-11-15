@@ -278,3 +278,23 @@ form input, textarea {
   flex-direction: row;
   justify-content: space-around;
 }
+
+.portada-contacto {
+  background-image: url(../img/istock.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  bottom: 35px;
+  height: 500px;
+  margin-top: 3rem;
+}
+.portada-p, .portada-h1{
+  color: white;
+  font-weight: bolder;
+}
+.portada-p{
+  font-size: 1.2em;
+}
+.portada-h1{
+  padding-top: 5rem;
+}
