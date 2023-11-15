@@ -164,6 +164,26 @@ form input, textarea {
   color: #fff;
   resize: none;
  }
+
+ @media (max-width: 768px) {
+  #contacto form {
+    width: 90%; 
+  }
+
+  .boton {
+    width: 100%; 
+  }
+  
+  .nombre,
+  .email,
+  .mensaje,
+  .boton,
+  .contacto h3 {
+    font-size: 1.2rem;
+  }
+}
+
+
  /*FOOTER*/
  footer{
   text-align: center;
@@ -177,7 +197,7 @@ form input, textarea {
   color: #000000;
 }
 
-/* Utilizamos flexbox para la estructura de dos columnas */
+/* Sobre Nosotros */
 .container {
   display: flex; 
 }
