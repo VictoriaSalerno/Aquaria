@@ -1,13 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Pacifico&family=Poppins&family=Righteous&family=Titillium+Web:wght@300&display=swap');
 
-/*HEADER*/
 *{
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/*HEADER NAV*/
 
 nav {
   margin: auto;
@@ -22,10 +23,6 @@ nav {
   width: 10rem;
   display: flex;
   padding-left: 3rem;
-}
-
-.tickets{
-    font-weight: bolder;
 }
 
 nav ul li {
@@ -52,11 +49,11 @@ nav ul li::before {
     transition: 0.4s ease-out;
   }
   
-  nav ul li:hover::before {
+nav ul li:hover::before {
     width: 100%;
-  }
+}
   
-  @media only screen and (max-width: 750px){
+@media only screen and (max-width: 875px){
     .hamburger{
         display: flex;
         flex-direction: column;
@@ -109,21 +106,30 @@ nav ul li::before {
       transition: 0.4s ease-out;
     }
   }  
+
+.tickets{
+    font-weight: bolder;
+}
+
   /*CONTACTO*/
+
 .contacto{
     color: black;
     text-align: center;
 }
+
 #contacto{
     display: grid;
     place-items: center;
     margin-top: 2rem;
 }
+
 #contacto form {
     display: flex;
     flex-direction: column;
     width: 40rem;
 }
+
 form input, textarea {
   padding: 0.93rem;
   border-radius: 0.5rem;
@@ -133,6 +139,7 @@ form input, textarea {
   background: #6D8FAA;
   margin-bottom: 0.93rem;
 }
+
 .boton {
   width: 6rem;
   cursor: pointer;
@@ -143,32 +150,40 @@ form input, textarea {
   letter-spacing: 0.063rem;
   margin-top: 15px;
 }
+
 .boton:hover {
   background-color: #55748d;
   box-shadow: 0 0 1.25rem #fff;
 }
+
 .contacto h3{
   padding: 1.5rem;
 }
+
  h3 .first-c{
   font-size: 2.5rem;
   font-weight: bolder;
  }
+
  h3 .second-c{
   font-size: 2.5rem;
   font-weight: bolder;
   color: #239EB9;
  }
+
 .nombre, .email, .mensaje, .boton{
   font-size: 1rem;
   color: #fff;
   resize: none;
  }
+
  /*FOOTER*/
+
  footer{
   text-align: center;
   margin: 2rem;
 }
+
 .redes a{
   display: inline-block;
   line-height: 2.81rem;
@@ -176,20 +191,34 @@ form input, textarea {
   transition: .3s;
   color: #000000;
 }
+
 .contacto{
   color: black;
   text-align: center;
 }
+
+.contacto .row {
+  align-items: center;
+  justify-content: center;
+  height: 460px;
+}
+
+.row > div {
+  padding: 40px;
+}
+
 #contacto{
   display: grid;
   place-items: center;
   margin-top: 2rem;
 }
+
 #contacto form {
   display: flex;
   flex-direction: column;
   width: 40rem;
 }
+
 form input, textarea {
 padding: 0.93rem;
 border-radius: 0.5rem;
@@ -199,6 +228,7 @@ outline: none;
 background: #6D8FAA;
 margin-bottom: 0.93rem;
 }
+
 .boton {
 width: 6rem;
 cursor: pointer;
@@ -209,22 +239,27 @@ text-transform: uppercase;
 letter-spacing: 0.063rem;
 margin-top: 15px;
 }
+
 .boton:hover {
 background-color: #55748d;
 box-shadow: 0 0 1.25rem #fff;
 }
+
 .contacto h3{
 padding: 1.5rem;
 }
+
 h3 .first-c{
 font-size: 2.5rem;
 font-weight: bolder;
 }
+
 h3 .second-c{
 font-size: 2.5rem;
 font-weight: bolder;
 color: #239EB9;
 }
+
 .nombre, .email, .mensaje, .boton{
 font-size: 1rem;
 color: #fff;
@@ -232,19 +267,15 @@ resize: none;
 }
 
 @media (max-width: 768px) {
-#contacto form {
+  #contacto form {
   width: 90%; 
-}
+  }
 
-.boton {
+  .boton {
   width: 100%; 
-}
+  }
 
-.nombre,
-.email,
-.mensaje,
-.boton,
-.contacto h3 {
+  .nombre, .email, .mensaje, .boton, .contacto h3 {
   font-size: 1.2rem;
 }
 }
@@ -252,10 +283,20 @@ resize: none;
 #carouselExampleIndicators{
   margin: 3rem 12rem;
 }
+
 .carousel-inner{
   border-radius: 4rem;
-  height: 40rem;
+  height: 700px;
 }
+
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-item img {
+  object-fit: cover;
+}
+
 .animal .box-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
@@ -275,8 +316,13 @@ resize: none;
   object-fit: cover;
 }
 
+.animal .box-container .box img{
+  transition: 0.4s all ease-in-out;
+}
+
 .animal .box-container .box:hover img{
   transform: scale(1.1);
+  transition: 0.4s all ease-in-out;
 }
 
 .animal .box-container .box .content{
@@ -315,6 +361,7 @@ resize: none;
 }
 
 /*TICKETS*/
+
 .box-t {
   width: 310px;
   height: 425px;
@@ -334,20 +381,22 @@ resize: none;
 
 .portada-contacto {
   background-image: url(../img/istock.webp);
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   bottom: 35px;
-  height: 500px;
   margin-top: 3rem;
 }
+
 .portada-p, .portada-h1{
   color: white;
-  font-weight: bolder;
 }
+
 .portada-p{
   font-size: 1.2em;
 }
+
 .portada-h1{
   padding-top: 5rem;
 }
@@ -366,7 +415,6 @@ resize: none;
   margin-top: 5rem;
 }
 
-
 /* TICKETS */
 
 .tickets-container{
@@ -377,10 +425,6 @@ resize: none;
   margin: 5rem;
   border-radius: 2.125rem;
 }
-
-
-
-
 
 
 /* Sobre Nosotros */
@@ -431,9 +475,46 @@ resize: none;
   .container {
     flex-direction: column;
   }
-
   .contenido {
     padding: 10px; /* Modifica el espaciado para pantallas mÃ¡s pequeÃ±as */
   }
-  
+}
+
+@media (max-width: 1150px) {
+  #carouselExampleIndicators {
+    margin: 0;
+  }
+  .carousel-inner {
+    border-radius: 0;
+  }
+  .animal .box-container {
+    margin: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .animal .box-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .animal h3 {
+    margin: 3rem 0;;
+  }
+  .animal h3 span {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .row > div {
+    padding: 20px;
+  }
+  .row h1 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+  }
+  .row p {
+    font-size: 1rem;
+  }
 }
