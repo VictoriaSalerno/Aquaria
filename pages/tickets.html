@@ -29,46 +29,82 @@
         </nav>
       </header>
   <main>
-    <h3 class="tickets-titulo">
-      <span class="first-c">CONSEGUI TUS </span>
-      <span class="second-c">TICKETS</span>
-    </h3>
+    <form action="#" method="get" id="formulariopersonal"></form>
+    <div class="contenedorpaquetes" >
+        
+          <div class="cajapaquete">
+              <img src="../img/kid.jpeg"class=tamimg alt="Niño">
+              <br>
+              <h4>PLAN 1</h4>
+              <p>Sumérgete detrás de escena en un viaje exclusivo por el acuario. ¡Explora las áreas restringidas, aprende cómo se cuidan y alimentan a los habitantes marinos y disfruta de una charla educativa con nuestros expertos! Reserva tu lugar para esta experiencia única y descubre los secretos ocultos del mundo submarino.</p>
+              <label for="P1">
+                 Comprar
+              </label>
+              <input type="checkbox" id="P1" >
+              <div id="MostrarP1"> 
+                <label for="cantP1"> Personas</label>
+                <select id="cantP1">
+                    <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select> <br>
+               </div> 
+         </div>
+          <div class="cajapaquete">
+            <img src="../img/mamm.jpg"class=tamimg alt="delfin">
+             <br>
+             <h4>PLAN 2</h4>
+             <p> Unete a nuestros talleres interactivos diseñados para pequeños exploradores y sus familias. ¡Pintura acuática, manualidades divertidas, conoce cómo se cuidan nuestros animales marinos y disfruta de juegos educativos! Los fines de semana, sumérgete en la diversión en nuestro acuario.</p>
+              <label for="P2">
+                Comprar
+              </label>
+              <input type="checkbox" id="P2" > <br>
+              <div id="MostrarP2">
+                  <label for="cantP2"> Personas</label>
+                  <select id="cantP2">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                  
+              </div>
+        </div>  
+        <div class="cajapaquete">  
+            <img src="../img/stingray-3399112_1280.jpg"class=tamimg alt="mantaralla">
+           <br>
+           <h4>PLAN 3</h4>
+           <p>Experimenta la magia de nuestro acuario después del horario habitual. Únete a nosotros para una noche especial llena de misterio y maravilla. Desde observaciones nocturnas de tiburones con linternas hasta una cena temática con vista a los tanques, ¡sumérgete en una aventura nocturna inolvidable!</p>
+            <label for="P2">
+              Comprar
+            </label>
+            <input type="checkbox" id="P3" > <br>
+            <div id="MostrarP3">
+                <label for="cantP3"> Cantidad</label>
+                <select id="cantP3">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                
+            </div>
+      </div>     
+  </div>
+  <br>
+    <div class="precio"id="preciototal">
+    </div>
+    <br>
+    <div class="boton">
+      <button type="submit">Comprar</button>
+    </div>
+ </form>
 
-    <section class="tickets-container">
-      <div class="card">
-          <img src="../img/mamm.jpg" class="card-img-top" alt="img tickets">
-          <div class="card-body">
-              <h5 class="card-title">PLAN 1</h5>
-              <p class="card-text" style="font-size: 1.1rem;">Sumérgete detrás de escena en un viaje exclusivo por el acuario. ¡Explora las áreas restringidas, aprende cómo se cuidan y alimentan a los habitantes marinos y disfruta de una charla educativa con nuestros expertos! Reserva tu lugar para esta experiencia única y descubre los secretos ocultos del mundo submarino.</p>
-              <button id="boton-plan-1" style="background-color: #23496B;" class="btn btn-primary agregar-carrito">COMPRAR</button>
-          </div>
-      </div>
-      <div class="card">
-          <img src="../img/kid.jpeg" class="card-img-top" alt="img tickets">
-          <div class="card-body">
-              <h5 class="card-title">PLAN 2</h5>
-              <p class="card-text" style="font-size: 1.1rem;"> Únete a nuestros talleres interactivos diseñados para pequeños exploradores y sus familias. ¡Pintura acuática, manualidades divertidas, conoce cómo se cuidan nuestros animales marinos y disfruta de juegos educativos! Los fines de semana, sumérgete en la diversión en nuestro acuario.</p>
-              <button id="boton-plan-2" style="background-color: #23496B;" class="btn btn-primary agregar-carrito">COMPRAR</button>
-          </div>
-      </div>
-      <div class="card">
-          <img src="../img/stingray-3399112_1280.jpg" class="card-img-top" alt="img tickets">
-          <div class="card-body">
-              <h5 class="card-title">PLAN 3</h5>
-              <p class="card-text" style="font-size: 1.1rem;"> Experimenta la magia de nuestro acuario después del horario habitual. Únete a nosotros para una noche especial llena de misterio y maravilla. Desde observaciones nocturnas de tiburones con linternas hasta una cena temática con vista a los tanques, ¡sumérgete en una aventura nocturna inolvidable!</p>
-              <button id="boton-plan-3" style="background-color: #23496B;" class="btn btn-primary agregar-carrito">COMPRAR</button>
-          </div>
-      </div>
-  </section>
-  
-  <aside class="carrito">
-      <h2>Carrito</h2>
-      <ul class="lista-carrito">
-          <!-- Aquí se mostrarán los productos agregados al carrito -->
-      </ul>
-      <p class="total">Total: $<span>0</span></p>
-      <button class="vaciar-carrito">Vaciar Carrito</button>
-  </aside>
+
   
 
 
@@ -95,5 +131,5 @@
     <script src="../js/js.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+</body>
 </html>

@@ -328,45 +328,66 @@ resize: none;
 
 /*TICKETS*/
 
-.box-t {
-  width: 310px;
-  height: 425px;
-  background-color: #6d8eaa;
-  border-radius: 34px;
+.contenedorpaquetes{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  }
+  .cajapaquete{
+      width: 300px;
+      background-color:#6D8FAA;;
+      border-radius: 20px;
+      margin: 10px;
+      padding: 10px;
+  }
+  
+  .cajapaquete h4 {
+      color:aliceblue;
+  }
+  
+  .tamimg{
+      width:100%;
+      height: auto;
+      
+  }
+  #MostrarP1{
+      display: none;
+  }
+  #MostrarP2{
+      display: none;
+  }
+  #MostrarP3{
+      display: none;
+  }
+  
+  .precio {
+      text-align: center;
+      color: #6D8FAA;
+  }
+  
+  .boton {
+      text-align: center;
+  }
+  
+  .boton button {
+      color: white;
+      background-color: #6D8FAA;
+      border-radius: 20px;
+      padding: 12px 24px; 
+      border: none; 
+      cursor: pointer; 
+      font-size: 16px; 
+      font-weight: bold; 
+      text-transform: uppercase; 
+      transition: background-color 0.3s ease; 
   }
 
-.tickets-titulo{
-  text-align: center;
-  padding: 3rem;
-}
-.tickets{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
+  .boton button:hover {
+      background-color: #485F77;
+  }
 
-.portada-contacto {
-  background-image: url(../img/istock.webp);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  bottom: 35px;
-  margin-top: 3rem;
-}
 
-.portada-p, .portada-h1{
-  color: white;
-}
-
-.portada-p{
-  font-size: 1.2em;
-}
-
-.portada-h1{
-  padding-top: 5rem;
-}
-
+  
 /* MAPA */
 
 .mapa{
