@@ -1,162 +1,125 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var hamburger = document.querySelector(".hamburger");
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
     hamburger.onclick = function () {
-        var nav = document.querySelector(".nav");
-        var ul = nav.querySelector("ul");
+        const nav = document.querySelector(".nav");
+        const ul = nav.querySelector("ul");
         ul.classList.toggle("active");
-            
+
         // También podemos agregar "active" a los elementos <li> dentro de <ul>
-        var lis = ul.querySelectorAll("li");
-        lis.forEach(function(li) {
+        const lis = ul.querySelectorAll("li");
+        lis.forEach(function (li) {
             li.classList.toggle("active");
         });
-        }
+    }
 })
 
-const nombreInput = document.querySelector('input[type="text"]');
-const emailInput = document.querySelector('input[type="email"]');
-const mensajeTextarea = document.querySelector('.mensaje');
-const botonEnviar = document.querySelector('.boton');
+const fileDirectory = window.location.pathname.split('/')
+const fileName = fileDirectory[fileDirectory.length - 1]
 
-botonEnviar.addEventListener('click', function() {
-    const nombre = nombreInput.value;
-    const email = emailInput.value;
-    const mensaje = mensajeTextarea.value;
+if (fileName == 'contacto.html') {
+    const nombreInput = document.querySelector('input[type="text"]');
+    const emailInput = document.querySelector('input[type="email"]');
+    const botonEnviar = document.querySelector('.boton');
+    const mensajeTextarea = document.querySelector('.mensaje');
 
-    localStorage.setItem('nombre', nombre);
-    localStorage.setItem('email', email);
-    localStorage.setItem('mensaje', mensaje);
+    botonEnviar.addEventListener('click', () => {
+        const email = emailInput.value;
+        const nombre = nombreInput.value;
+        const mensaje = mensajeTextarea.value;
 
-    if (nombre === '') {
-        alert('Por favor ingrese su nombre.');
-        return;
+        console.log(mensaje);
+
+        localStorage.setItem('email', email);
+        localStorage.setItem('nombre', nombre);
+        localStorage.setItem('mensaje', mensaje);
+
+        if (email === '') {
+            alert('Por favor ingrese su email.');
+            return;
+        }
+
+        if (nombre === '') {
+            alert('Por favor ingrese un nombre.');
+            return;
+        }
+
+        if (mensaje === '') {
+            alert('Por favor ingrese su mensaje.');
+            return;
+        }
+
+        Swal.fire({
+            title: 'Nos estaremos contactando en la brevedad',
+            html: '¡Tu mensaje se ha enviado correctamente!',
+            icon: 'info',
+        });
+
+        emailInput.value = '';
+        nombreInput.value = '';
+        mensajeTextarea.value = '';
+    });   
+}
+
+let precio = 0;
+
+if (fileName == 'tickets.html') {
+    let selectedButtons = {
+        "P1": false,
+        "P2": false,
+        "P3": false
+    };
+    
+    const buttonP1 = document.getElementById("P1");
+    const buttonP2 = document.getElementById("P2");
+    const buttonP3 = document.getElementById("P3");
+    
+    buttonP1.onclick = () => buttonApretado('P1');
+    buttonP2.onclick = () => buttonApretado('P2');
+    buttonP3.onclick = () => buttonApretado('P3');
+    
+    MostrarPrecioTotal();
+    
+    function buttonApretado(plan) {
+        selectedButtons[plan] = !selectedButtons[plan];
+    
+        let mostrarDiv = document.getElementById("Mostrar" + plan);
+        mostrarDiv.style.display = selectedButtons[plan] ? "block" : "none";
+    
+        MostrarPrecioTotal();
+    }
+    
+    function MostrarPrecioTotal() {
+        precio = 0;
+
+        if (selectedButtons["P1"]) {
+            precio += 5000 * document.getElementById("cantP1").value;
+        }
+        if (selectedButtons["P2"]) {
+            precio += 7000 * document.getElementById("cantP2").value;
+        }
+        if (selectedButtons["P3"]) {
+            precio += 9000 * document.getElementById("cantP3").value;
+        }
+    
+        document.getElementById("preciototal").innerHTML = `<span>Total: $${precio}</span><i class="fas fa-shopping-cart"></i>`;
     }
 
-    if (email === '') {
-        alert('Por favor ingrese un correo electrónico.');
-        return;
-    }
+    const purchaseButton = document.getElementById("purchaseButton");
 
-    if (mensaje === '') {
-        alert('Por favor ingrese un mensaje.');
-        return;
-    }
+    purchaseButton.addEventListener("click", () => {
 
-    const resultadoHTML = '¡Tu mensaje se ha enviado correctamente!';
-
-    Swal.fire({
-        title: 'Nos estaremos contactando en la brevedad',
-        html: resultadoHTML,
-        icon: 'info',
-    });
-
-    nombreInput.value = '';
-    emailInput.value = '';
-    mensajeTextarea.value = '';
-});
-
-
-
-
-
-
-
-
-
-window.onload=DocumentoCargado; 
-
-//En esta función se capturan todos los eventos requeridos por el script
-function DocumentoCargado(){
-   let checkboxP1 = document.getElementById("P1"); //obtiene los elementos del documento html y los asigna a variables
-   let checkboxP2 = document.getElementById("P2"); 
-   let checkboxP3 = document.getElementById("P3"); 
-   let cantpersonasP1 = document.getElementById("cantP1");
-   let cantpersonasP2 = document.getElementById("cantP2");
-   let cantpersonasP3 = document.getElementById("cantP3");
-   cantpersonasP1.onchange = selectp1personas; // Se ejecuta la función selectp1personas() cuando ocurre el evento
-   cantpersonasP2.onchange = selectp2personas;
-   cantpersonasP3.onchange = selectp3personas;
-   checkboxP1.onclick = checkboxP1Apretado; 
-   checkboxP2.onclick = checkboxP2Apretado;
-   checkboxP3.onclick = checkboxP3Apretado;
-
-   MostrarPrecioTotal(); // llama a la función 
+        if (precio > 0) {
+            Swal.fire({
+                title: 'Nos estaremos contactando en la brevedad',
+                html: '¡Su compra ha sido exitosa!',
+                icon: 'success',
+            });
+        } else {
+            Swal.fire({
+                title: 'Se ha producido un error',
+                html: 'Debe seleccionar un plan para continuar',
+                icon: 'error',
+            });
+        }
+    })
 }
-//Cuando el usuario aprieta el checkbox, se debe mostrar u ocultar el objeto select
-
-function checkboxP1Apretado()
-{
-   if(document.getElementById("P1").checked == true)
-   {
-       document.getElementById("MostrarP1").style.display = "block";
-   }
-   else
-   {
-       document.getElementById("MostrarP1").style.display = "none";
-   }
-   MostrarPrecioTotal();
-}
-function checkboxP2Apretado()
-{
-   if(document.getElementById("P2").checked == true)
-   {
-       document.getElementById("MostrarP2").style.display = "block";
-   }
-   else
-   {
-       document.getElementById("MostrarP2").style.display = "none";
-   }
-   MostrarPrecioTotal();
-}
-function checkboxP3Apretado()
-{
-   if(document.getElementById("P3").checked == true)
-   {
-       document.getElementById("MostrarP3").style.display = "block";
-   }
-   else
-   {
-       document.getElementById("MostrarP3").style.display = "none";
-   }
-   MostrarPrecioTotal();
-}
-// En base a los checkbox y los objetos select, esta función calcula el precio total
-function MostrarPrecioTotal()
-{
-  let precio = 0;
-
-  if (document.getElementById("P1").checked == true)
-  {
-      precio += 5000 * document.getElementById("cantP1").value;
-  }
-
-  if (document.getElementById("P2").checked == true)
-  {
-      precio += 7000 * document.getElementById("cantP2").value;
-  }
-  if (document.getElementById("P3").checked == true)
-  {
-      precio += 9000 * document.getElementById("cantP3").value;
-  }
-  document.getElementById("preciototal").innerHTML= "precio: $" + precio;
-}
-//Se ejecuta cuando cambia el valor del select
-function selectp1personas()
-{
-  MostrarPrecioTotal();
-}
-function selectp2personas()
-{
-  MostrarPrecioTotal();
-}
-function selectp3personas()
-{
-  MostrarPrecioTotal();
-}
-
-
-
-
-
-
-

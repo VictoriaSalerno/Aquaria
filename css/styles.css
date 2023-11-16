@@ -113,6 +113,20 @@ nav ul li:hover::before {
 
   /*CONTACTO*/
 
+.portada-contacto {
+    background-image: url(../img/istock.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    bottom: 35px;
+    margin-top: 3rem;
+}
+  
+.portada-p, .portada-h1{
+    color: white;
+}
+
 .contacto{
     color: black;
     text-align: center;
@@ -328,48 +342,158 @@ resize: none;
 
 /*TICKETS*/
 
+.tickets-titulo{
+  text-align: center;
+  padding: 3rem;
+}
+
+.tickets-caja {
+  padding: 4rem 0 4rem;
+}
+
 .contenedorpaquetes{
   display: flex;
   justify-content: space-around;
   text-align: center;
+  padding-bottom: 4rem;
+}
+
+.cajapaquete{
+    width: 340px;
+    background-color:#6D8FAA;;
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.3s all ease-in-out;
   }
-  .cajapaquete{
-      width: 300px;
-      background-color:#6D8FAA;;
-      border-radius: 20px;
-      margin: 10px;
-      padding: 10px;
-  }
+
+.cajapaquete:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+  transform: scale(1.1);
+  transition: 0.3s all ease-in-out;
+}
+
+.cajapaquete p {
+  color: white;
+  padding: 1rem;
+  margin-bottom: 0;
+}
   
-  .cajapaquete h4 {
+.cajapaquete h4 {
       color:aliceblue;
-  }
+}
+
+.cajapaquete img {
+  padding: 20px;
+}
+
+.precio-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0 2rem 1rem;
+}
+
+.precio-btn-container .preciocaja {
+  font-size: 30px;
+}
+
+.precio-btn-container button {
+  color: white;
+  background-color: #239EB9;
+  border-radius: 20px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.precio-btn-container button:hover {
+  background-color: #23496B;
+}
+
+#MostrarP1, #MostrarP2, #MostrarP3 {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+#preciototal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  padding: 12px 24px;
+  margin: 20px 0;
+  font-size: 2.5rem; /* Ajusta el tamaño del texto según tu preferencia */
+  font-weight: bolder;
+}
+
+#preciototal span {
+  font-size: 2rem;
+}
+
+#preciototal i {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.boton-comprar {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.boton-comprar button {
+  display: flex;
+  color: white;
+  background-color: #6D8FAA;
+  border-radius: 20px;
+  padding: 15px 30px; /* Ajusta el relleno del botón según tu preferencia */
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.boton-comprar button:hover {
+  background-color: #23496B;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
   
-  .tamimg{
+.tamimg{
       width:100%;
       height: auto;
-      
+      border-radius: 40px;
   }
-  #MostrarP1{
+#MostrarP1{
       display: none;
   }
-  #MostrarP2{
+#MostrarP2{
       display: none;
-  }
-  #MostrarP3{
+}
+#MostrarP3{
       display: none;
   }
   
-  .precio {
+.boton {
       text-align: center;
-      color: #6D8FAA;
-  }
+}
   
-  .boton {
-      text-align: center;
-  }
   
-  .boton button {
+  
+.boton button {
+    display: flex;
       color: white;
       background-color: #6D8FAA;
       border-radius: 20px;
@@ -380,11 +504,11 @@ resize: none;
       font-weight: bold; 
       text-transform: uppercase; 
       transition: background-color 0.3s ease; 
-  }
+}
 
-  .boton button:hover {
+.boton button:hover {
       background-color: #485F77;
-  }
+}
 
 
   
@@ -402,48 +526,46 @@ resize: none;
   padding: 3rem;
 }
 
-/* TICKETS */
-
-.tickets-container{
-  display: flex;
-  justify-content: center;
-}
-.card{
-  margin: 4rem;
-  border-radius: 2.125rem;
-  width: 18rem;
-}
-
-
 /* Sobre Nosotros */
 .container {
   display: flex; 
 }
 
 .imagen {
-  flex: 1;
+  padding: 2rem;
 }
 
 .imagen img {
-  max-width: 100%;
-  height: auto;
+  width: 500PX;
+  height: 400px;
   border: 2px solid #239EB9;
+  border-radius: 20px;
 }
 
 .contenido {
-  flex: 1; 
-  padding: 20px;
-  text-align: center;
+  display: grid;
+  grid-template-rows: fit-content 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:  "imagen titulo"
+                        "imagen parrafo";
 }
 
+.contenido h3 {
+  grid-area: titulo;
+}
+
+.imagen {
+  grid-area: imagen;
+}
+
+.contenido p {
+  grid-area: parrafo;
+}
 
 .container {
   display: flex; 
 }
 
-.imagen {
-  flex: 1;
-}
 
 .imagen img {
   max-width: 100%;
@@ -475,6 +597,13 @@ footer{
   .card-text {
     font-size: 1rem !important;
   }
+  .contenido {
+    grid-template-rows: fit-content 1fr 0.5fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:  "titulo"
+                          "imagen"
+                          "parrafo";
+  }
 }
 
 @media (max-width: 1150px) {
@@ -486,6 +615,13 @@ footer{
   }
   .animal .box-container {
     margin: 0;
+  }
+  .contenedorpaquetes {
+    flex-direction: column;
+    align-items: center ;
+  }
+  .cajapaquete {
+    width: 500px;
   }
 }
 
@@ -522,6 +658,9 @@ footer{
   .card {
     width: 24rem;
   }
+  .cajapaquete {
+    width: 400px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -546,5 +685,11 @@ footer{
 @media (max-width: 440px) {
   .card {
     width:  18rem;
+  }
+  .cajapaquete {
+    width: 300px;
+  }
+  .cajapaquete .precio-btn-container {
+    padding: 0 0 1rem;
   }
 }
