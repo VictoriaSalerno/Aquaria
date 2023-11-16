@@ -388,8 +388,9 @@ resize: none;
   justify-content: center;
 }
 .card{
-  margin: 5rem;
+  margin: 4rem;
   border-radius: 2.125rem;
+  width: 18rem;
 }
 
 
@@ -435,6 +436,10 @@ resize: none;
   text-align: center;
 }
 
+footer{
+  margin-top: 3rem;
+}
+
 
 @media (max-width: 1200px) {
   .container {
@@ -442,6 +447,12 @@ resize: none;
   }
   .contenido {
     padding: 10px; 
+  }
+  .card {
+    margin: 1.25rem;
+  }
+  .card-text {
+    font-size: 1rem !important;
   }
 }
 
@@ -457,7 +468,7 @@ resize: none;
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 875px) {
   .animal .box-container {
     display: flex;
     flex-direction: column;
@@ -468,6 +479,27 @@ resize: none;
   }
   .animal h3 span {
     font-size: 1.8rem;
+  }
+  .logo {
+    width: 9rem;
+  }
+  .card-text {
+    font-size: 1rem !important;
+  }
+  .tickets-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: 34rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .card {
+    width: 24rem;
   }
 }
 
@@ -482,8 +514,16 @@ resize: none;
   .row p {
     font-size: 1rem;
   }
+  .logo {
+    width: 8rem;
+  }
+  nav ul {
+    top: 7.45rem;
+}
 }
 
-footer{
-  margin-top: 3rem;
+@media (max-width: 440px) {
+  .card {
+    width:  18rem;
+  }
 }
