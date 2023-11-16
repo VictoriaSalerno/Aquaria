@@ -156,41 +156,12 @@ form input, textarea {
   box-shadow: 0 0 1.25rem #fff;
 }
 
-.contacto h3{
-  padding: 1.5rem;
-}
-
- h3 .first-c{
-  font-size: 2.5rem;
-  font-weight: bolder;
- }
-
- h3 .second-c{
-  font-size: 2.5rem;
-  font-weight: bolder;
-  color: #239EB9;
- }
 
 .nombre, .email, .mensaje, .boton{
   font-size: 1rem;
   color: #fff;
   resize: none;
  }
-
- /*FOOTER*/
-
- footer{
-  text-align: center;
-  margin: 2rem;
-}
-
-.redes a{
-  display: inline-block;
-  line-height: 2.81rem;
-  margin: 0 0.31rem;
-  transition: .3s;
-  color: #000000;
-}
 
 .contacto{
   color: black;
@@ -245,15 +216,10 @@ background-color: #55748d;
 box-shadow: 0 0 1.25rem #fff;
 }
 
-.contacto h3{
-padding: 1.5rem;
-}
-
 h3 .first-c{
 font-size: 2.5rem;
 font-weight: bolder;
 }
-
 h3 .second-c{
 font-size: 2.5rem;
 font-weight: bolder;
@@ -449,7 +415,6 @@ resize: none;
 }
 
 
-/* Estilos para pantallas mÃ¡s grandes */
 .container {
   display: flex; 
 }
@@ -470,13 +435,13 @@ resize: none;
   text-align: center;
 }
 
-/* Estilos para pantallas mÃ¡s pequeÃ±as */
+
 @media (max-width: 1200px) {
   .container {
     flex-direction: column;
   }
   .contenido {
-    padding: 10px; /* Modifica el espaciado para pantallas mÃ¡s pequeÃ±as */
+    padding: 10px; 
   }
 }
 
@@ -517,4 +482,8 @@ resize: none;
   .row p {
     font-size: 1rem;
   }
+}
+
+footer{
+  margin-top: 3rem;
 }

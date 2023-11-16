@@ -18,7 +18,6 @@ const emailInput = document.querySelector('input[type="email"]');
 const mensajeTextarea = document.querySelector('.mensaje');
 const botonEnviar = document.querySelector('.boton');
 
-
 botonEnviar.addEventListener('click', function() {
     const nombre = nombreInput.value;
     const email = emailInput.value;
@@ -28,10 +27,29 @@ botonEnviar.addEventListener('click', function() {
     localStorage.setItem('email', email);
     localStorage.setItem('mensaje', mensaje);
 
-  
-    alert('Los datos se han guardado.');
+    if (nombre === '') {
+        alert('Por favor ingrese su nombre.');
+        return;
+    }
 
-    
+    if (email === '') {
+        alert('Por favor ingrese un correo electrónico.');
+        return;
+    }
+
+    if (mensaje === '') {
+        alert('Por favor ingrese un mensaje.');
+        return;
+    }
+
+    const resultadoHTML = '¡Tu mensaje se ha enviado correctamente!';
+
+    Swal.fire({
+        title: 'Nos estaremos contactando en la brevedad',
+        html: resultadoHTML,
+        icon: 'info',
+    });
+
     nombreInput.value = '';
     emailInput.value = '';
     mensajeTextarea.value = '';
