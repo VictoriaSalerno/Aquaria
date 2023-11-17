@@ -700,16 +700,26 @@ width: 307px;
 height: 287px;
 }
 .circle .ellipse {
-position: absolute;
 width: 307px;
 height: 287px;
 background-color: #9ab8d4a6;
 border-radius: 153.5px/143.5px;
 }
-
 .circle .ellipse p{
   padding: 6rem 3.3rem;
   font-family: 'Titillium Web';
   font-weight: bold;
   text-align: center;
+}
+
+@media screen and (max-width: 700px){
+  .mapa{
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ubic{
+    width: 95%;
+    margin-top: 2.5rem;
+  }
 }
